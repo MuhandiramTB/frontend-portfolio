@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Cpu, Figma, GitMerge, Briefcase, School, Code } from 'lucide-react';
+import { Github, Linkedin, Mail, Cloud, Figma, GitMerge, Briefcase, School, Code, TerminalSquare, Puzzle, Pipette } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 export interface NavItem {
@@ -75,12 +75,12 @@ export interface TechStackItem {
 }
 
 export const techStackData: TechStackItem[] = [
-  { id: 1, name: 'React', icon: Code }, // Using generic Code icon as stand-in for React logo
-  { id: 2, name: 'Tailwind CSS', icon: Code }, // Using generic Code icon
-  { id: 3, name: 'Firebase', icon: Cpu }, // Using generic Cpu icon
+  { id: 1, name: 'React', icon: Puzzle }, 
+  { id: 2, name: 'Tailwind CSS', icon: Pipette }, 
+  { id: 3, name: 'Firebase', icon: Cloud }, 
   { id: 4, name: 'Git', icon: GitMerge },
   { id: 5, name: 'GitHub', icon: Github },
-  { id: 6, name: 'VS Code', icon: Code }, // Using generic Code icon
+  { id: 6, name: 'VS Code', icon: TerminalSquare }, 
   { id: 7, name: 'Figma', icon: Figma },
 ];
 
@@ -91,7 +91,8 @@ export interface ExperienceItem {
   date: string;
   description: string;
   type: 'internship' | 'freelance' | 'open-source';
-  icon: LucideIcon;
+  icon: LucideIcon; // Note: The icon property was already here but not used for mapping in the component.
+                    // The component directly mapped item.type to an icon. This is fine.
 }
 
 export const experienceData: ExperienceItem[] = [
@@ -102,7 +103,7 @@ export const experienceData: ExperienceItem[] = [
     date: 'Jun 2022 - Aug 2022',
     description: 'Contributed to the development of responsive UI components and collaborated with senior developers on new features.',
     type: 'internship',
-    icon: School,
+    icon: School, // Retained for clarity, though component remaps
   },
   {
     id: 2,
@@ -111,7 +112,7 @@ export const experienceData: ExperienceItem[] = [
     date: 'Sep 2022 - Present',
     description: 'Designed and developed custom websites for small businesses, focusing on performance and user experience.',
     type: 'freelance',
-    icon: Briefcase,
+    icon: Briefcase, // Retained for clarity
   },
   {
     id: 3,
@@ -120,7 +121,7 @@ export const experienceData: ExperienceItem[] = [
     date: 'Jan 2023 - May 2023',
     description: 'Improved documentation and submitted pull requests for bug fixes and new components to a popular UI library.',
     type: 'open-source',
-    icon: Code,
+    icon: Code, // Retained for clarity
   },
 ];
 
@@ -130,7 +131,7 @@ export interface SocialLink {
   icon: LucideIcon;
 }
 export const socialLinks: SocialLink[] = [
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/yourprofile', icon: Linkedin },
-  { name: 'GitHub', url: 'https://github.com/yourprofile', icon: Github },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/tbmuhandiram', icon: Linkedin },
+  { name: 'GitHub', url: 'https://github.com/tbmuhandiram', icon: Github },
   { name: 'Email', url: 'mailto:tb.muhandiram@example.com', icon: Mail },
 ];

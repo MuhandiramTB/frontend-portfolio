@@ -2,15 +2,28 @@
 
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import React, { useEffect, useState } from 'react';
 
 export function AboutSection() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 100); // Slight delay to ensure CSS is ready
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section id="about" className="py-16 md:py-24 bg-secondary/30">
+    <section id="about" className="py-16 md:py-24 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+        <h2 
+          className={`mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`} 
+          style={{ animationDelay: '0.2s' }}
+        >
           About Me
         </h2>
-        <Card className="overflow-hidden shadow-xl md:mx-auto md:max-w-4xl">
+        <Card 
+          className={`overflow-hidden shadow-xl md:mx-auto md:max-w-4xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`} 
+          style={{ animationDelay: '0.4s' }}
+        >
           <div className="md:flex">
             <div className="md:w-1/3">
               <Image

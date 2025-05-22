@@ -3,6 +3,7 @@
 import { experienceData } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Briefcase, School, Code } from "lucide-react";
+import React, { useEffect, useState } from 'react';
 
 const iconMap = {
   internship: School,
@@ -11,17 +12,30 @@ const iconMap = {
 };
 
 export function ExperienceSection() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section id="experience" className="py-16 md:py-24">
+    <section id="experience" className="py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+        <h2 
+          className={`mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
+          style={{ animationDelay: '0.2s' }}
+        >
           Experience & Contributions
         </h2>
         <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-border before:content-[''] md:before:mx-auto md:before:ml-0">
           {experienceData.map((item, index) => {
             const IconComponent = iconMap[item.type];
             return (
-              <div key={item.id} className="relative flex items-start md:grid md:grid-cols-[1fr_auto_1fr] md:gap-x-8">
+              <div 
+                key={item.id} 
+                className={`relative flex items-start md:grid md:grid-cols-[1fr_auto_1fr] md:gap-x-8 ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
+                style={{ animationDelay: `${0.4 + index * 0.2}s` }}
+              >
                 <div className={`flex items-center justify-start ${index % 2 === 0 ? 'md:order-1 md:col-start-1' : 'md:order-3 md:col-start-3 md:text-right'}`}>
                   {/* Empty div for spacing on alternating sides or content if needed */}
                 </div>
