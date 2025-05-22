@@ -27,7 +27,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/#home" className="text-2xl font-bold text-primary">
-          TB [LastName]
+          TB Muhandiram
         </Link>
         <nav className="hidden items-center space-x-6 md:flex">
           {navItems.map((item) => (

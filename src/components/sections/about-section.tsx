@@ -15,7 +15,7 @@ export function AboutSection() {
             <div className="md:w-1/3">
               <Image
                 src="https://placehold.co/400x400.png"
-                alt="TB [LastName]"
+                alt="TB Muhandiram"
                 width={400}
                 height={400}
                 className="h-full w-full object-cover"
@@ -24,7 +24,7 @@ export function AboutSection() {
             </div>
             <div className="md:w-2/3">
               <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-foreground">Hello, I&apos;m TB [LastName]</CardTitle>
+                <CardTitle className="text-2xl font-semibold text-foreground">Hello, I&apos;m TB Muhandiram</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
