@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
     id: 3,
     name: 'Portfolio Website Template',
     description: 'A sleek, customizable portfolio template for developers and creatives to showcase their work with elegance.',
-    image: 'https://cdn.pixabay.com/photo/2020/03/19/21/54/illustration-4948885_640.png',
+    image: 'https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_640.jpg', // Updated image link
     technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
     githubLink: 'https://github.com',
     liveLink: '#',
@@ -76,7 +76,6 @@ export interface TechStackItem {
   icon: LucideIcon;
 }
 
-// Updated icons for Tech Stack
 export const techStackData: TechStackItem[] = [
   { id: 1, name: 'React/Next.js', icon: Rocket }, 
   { id: 2, name: 'Tailwind CSS', icon: Palette }, 
@@ -138,4 +137,3 @@ export const socialLinks: SocialLink[] = [
   { name: 'GitHub', url: 'https://github.com/tbmuhandiram', icon: Github },
   { name: 'Email', url: 'mailto:tb.muhandiram@example.com', icon: Mail },
 ];
-
