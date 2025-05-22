@@ -26,14 +26,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased animate-in fade-in duration-500`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            {children}
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>

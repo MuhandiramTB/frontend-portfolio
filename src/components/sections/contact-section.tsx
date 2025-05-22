@@ -1,4 +1,3 @@
-
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -63,7 +62,7 @@ export function ContactSection() {
         >
           Get In Touch
         </h2>
-        <div className="grid gap-12 md:grid-cols-2">
+        <div className="max-w-2xl mx-auto">
           <Card 
             className={`shadow-xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
             style={{ animationDelay: mounted ? '0.4s' : '0s' }}
@@ -121,29 +120,21 @@ export function ContactSection() {
             </CardContent>
           </Card>
           <div 
-            className={`space-y-8 ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
+            className={`flex justify-center space-x-6 mt-8 ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
             style={{ animationDelay: mounted ? '0.6s' : '0s' }}
           >
-             <Card className="shadow-xl">
-                <CardHeader>
-                    <CardTitle className="text-2xl font-semibold text-foreground">Connect with me</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-muted-foreground mb-6">
-                        I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of something amazing. Feel free to reach out through my social channels.
-                    </p>
-                    <div className="space-y-4">
-                    {socialLinks.map((link) => (
-                        <Button key={link.name} variant="outline" className="w-full justify-start text-left" asChild>
-                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                            <link.icon className="mr-3 h-5 w-5 text-primary" />
-                            {link.name}
-                        </Link>
-                        </Button>
-                    ))}
-                    </div>
-                </CardContent>
-             </Card>
+            {socialLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110"
+                aria-label={link.name}
+              >
+                <link.icon className="h-6 w-6" />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
