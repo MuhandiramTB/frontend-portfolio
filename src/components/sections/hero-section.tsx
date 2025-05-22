@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Twitter, Code2, TerminalSquare, Layout, Database, Cloud, Cpu } from "lucide-react";
 import React, { useEffect, useState } from 'react';
 
 export function HeroSection() {
@@ -13,8 +13,52 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative flex h-screen min-h-[600px] w-full flex-col items-center justify-center bg-gradient-to-br from-background to-secondary/50 px-4 text-center overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-[0.02] animate-pan-grid"></div>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-10 dark:opacity-[0.05] animate-pan-grid"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/0 to-background/80"></div>
+      
+      {/* Floating Code Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute text-primary/20 dark:text-primary/10 font-mono text-sm animate-float-code"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${15 + Math.random() * 15}s`,
+            }}
+          >
+            {`<${['div', 'span', 'p', 'button', 'input', 'form', 'nav', 'header', 'footer'][Math.floor(Math.random() * 9)]} />`}
+          </div>
+        ))}
+      </div>
+
+      {/* Floating Tech Icons */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[
+          { icon: Code2, delay: '0s', size: 'h-10 w-10' },
+          { icon: TerminalSquare, delay: '2s', size: 'h-8 w-8' },
+          { icon: Layout, delay: '4s', size: 'h-12 w-12' },
+          { icon: Database, delay: '1s', size: 'h-9 w-9' },
+          { icon: Cloud, delay: '3s', size: 'h-11 w-11' },
+          { icon: Cpu, delay: '5s', size: 'h-10 w-10' },
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="absolute text-primary/20 dark:text-primary/10 animate-float-icon"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: item.delay,
+            }}
+          >
+            <item.icon className={item.size} />
+          </div>
+        ))}
+      </div>
+
       <style jsx global>{`
         .bg-grid-pattern {
           background-image: linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
@@ -49,7 +93,46 @@ export function HeroSection() {
           50% { transform: translateY(-20px); }
           100% { transform: translateY(0px); }
         }
+        .animate-float-code {
+          animation: floatCode 20s ease-in-out infinite;
+        }
+        @keyframes floatCode {
+          0% {
+            transform: translate(0, 0) rotate(0deg);
+            opacity: 0;
+          }
+          20% {
+            opacity: 0.8;
+          }
+          80% {
+            opacity: 0.8;
+          }
+          100% {
+            transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) rotate(${Math.random() * 360}deg);
+            opacity: 0;
+          }
+        }
+        .animate-float-icon {
+          animation: floatIcon 25s ease-in-out infinite;
+        }
+        @keyframes floatIcon {
+          0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0;
+          }
+          20% {
+            opacity: 0.8;
+          }
+          80% {
+            opacity: 0.8;
+          }
+          100% {
+            transform: translate(${Math.random() * 300 - 150}px, ${Math.random() * 300 - 150}px) scale(${0.8 + Math.random() * 1.2});
+            opacity: 0;
+          }
+        }
       `}</style>
+
       <div className="relative z-10 space-y-6">
         <div className="animate-float">
           <h1 className="animate-fade-in-up text-5xl font-extrabold tracking-tight text-primary sm:text-6xl md:text-7xl" style={{ animationDelay: '0.2s' }}>
