@@ -1,2 +1,3 @@
+
 // Flows will be imported for their side effects in this file.
-import '@/ai/flows/project-idea-flow';
+// import '@/ai/flows/project-idea-flow'; // Removed this line
