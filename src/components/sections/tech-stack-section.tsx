@@ -1,3 +1,4 @@
+
 "use client";
 
 import { techStackData } from "@/lib/data";
@@ -16,7 +17,7 @@ export function TechStackSection() {
       <div className="container mx-auto px-4 md:px-6">
         <h2 
           className={`mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
-          style={{ animationDelay: '0.2s' }}
+          style={{ animationDelay: mounted ? '0.2s' : '0s' }}
         >
           My Tech Stack
         </h2>
@@ -25,7 +26,7 @@ export function TechStackSection() {
             <Card 
               key={tech.id} 
               className={`transform p-1 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-110 ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
-              style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+              style={{ animationDelay: mounted ? `${0.4 + index * 0.1}s` : '0s' }}
             >
               <CardContent className="flex flex-col items-center justify-center space-y-2 p-6 aspect-square">
                 <tech.icon className="h-12 w-12 text-accent" />

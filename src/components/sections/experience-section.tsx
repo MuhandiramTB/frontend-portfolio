@@ -1,3 +1,4 @@
+
 "use client";
 
 import { experienceData } from "@/lib/data";
@@ -23,7 +24,7 @@ export function ExperienceSection() {
       <div className="container mx-auto px-4 md:px-6">
         <h2 
           className={`mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
-          style={{ animationDelay: '0.2s' }}
+          style={{ animationDelay: mounted ? '0.2s' : '0s' }}
         >
           Experience & Contributions
         </h2>
@@ -34,7 +35,7 @@ export function ExperienceSection() {
               <div 
                 key={item.id} 
                 className={`relative flex items-start md:grid md:grid-cols-[1fr_auto_1fr] md:gap-x-8 ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`}
-                style={{ animationDelay: `${0.4 + index * 0.2}s` }}
+                style={{ animationDelay: mounted ? `${0.4 + index * 0.2}s` : '0s' }}
               >
                 <div className={`flex items-center justify-start ${index % 2 === 0 ? 'md:order-1 md:col-start-1' : 'md:order-3 md:col-start-3 md:text-right'}`}>
                   {/* Empty div for spacing on alternating sides or content if needed */}
