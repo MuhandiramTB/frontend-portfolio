@@ -22,7 +22,7 @@ export function AboutSection() {
           About Me
         </h2>
         <Card 
-          className={`overflow-hidden shadow-xl md:mx-auto md:max-w-4xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'}`} 
+          className={`overflow-hidden shadow-xl md:mx-auto md:max-w-4xl ${mounted ? 'animate-global-fade-in-up' : 'opacity-0'} transition-shadow duration-300 hover:shadow-2xl`} 
           style={{ animationDelay: mounted ? '0.4s' : '0s' }}
         >
           <div className="md:flex">
