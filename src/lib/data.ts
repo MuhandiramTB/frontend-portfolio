@@ -35,7 +35,7 @@ export const projectsData: Project[] = [
     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Express.js'],
     githubLink: 'https://github.com',
     liveLink: '#',
-    imageAiHint: 'modern online shopping'
+    imageAiHint: 'ecommerce website interface'
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const projectsData: Project[] = [
     technologies: ['React', 'Firebase', 'Material UI', 'Redux'],
     githubLink: 'https://github.com',
     liveLink: '#',
-    imageAiHint: 'team productivity tool'
+    imageAiHint: 'task management dashboard'
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ export const projectsData: Project[] = [
     technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
     githubLink: 'https://github.com',
     liveLink: '#',
-    imageAiHint: 'personal developer showcase'
+    imageAiHint: 'developer portfolio design'
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const projectsData: Project[] = [
     technologies: ['Vue.js', 'Spoonacular API', 'Bootstrap', 'Vuex'],
     githubLink: 'https://github.com',
     liveLink: '#',
-    imageAiHint: 'digital cookbook app'
+    imageAiHint: 'recipe app interface'
   },
 ];
 
@@ -77,13 +77,13 @@ export interface TechStackItem {
 
 // Updated icons for Tech Stack
 export const techStackData: TechStackItem[] = [
-  { id: 1, name: 'React/Next.js', icon: Rocket }, // Rocket for Next.js/React's performance focus
-  { id: 2, name: 'Tailwind CSS', icon: Palette }, // Palette for styling
+  { id: 1, name: 'React/Next.js', icon: Rocket }, 
+  { id: 2, name: 'Tailwind CSS', icon: Palette }, 
   { id: 3, name: 'Firebase', icon: Cloud }, 
   { id: 4, name: 'Git', icon: GitMerge },
-  { id: 5, name: 'Node.js/Express', icon: Package }, // Package or Code for backend
+  { id: 5, name: 'Node.js/Express', icon: Package }, 
   { id: 6, name: 'MongoDB', icon: Database },
-  { id: 7, name: 'Genkit AI', icon: Brain }, // Brain for AI
+  { id: 7, name: 'Genkit AI', icon: Brain }, 
 ];
 
 
