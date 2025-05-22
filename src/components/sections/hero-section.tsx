@@ -82,9 +82,7 @@ export function HeroSection() {
           </a>
         </div>
       </div>
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-8 w-8 text-primary/50" />
-      </div>
+      
     </section>
   );
 }
