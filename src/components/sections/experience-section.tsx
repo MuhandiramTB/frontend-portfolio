@@ -43,7 +43,7 @@ export function ExperienceSection() {
                 <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md md:order-2 md:col-start-2">
                   <IconComponent className="h-5 w-5" />
                 </div>
-                <Card className={`ml-8 w-full shadow-lg md:ml-0 ${index % 2 === 0 ? 'md:order-3 md:col-start-3' : 'md:order-1 md:col-start-1'}`}>
+                <Card className={`ml-8 w-full shadow-lg md:ml-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${index % 2 === 0 ? 'md:order-3 md:col-start-3' : 'md:order-1 md:col-start-1'}`}>
                   <CardHeader>
                     <CardTitle className="text-lg font-semibold text-foreground">{item.role}</CardTitle>
                     <CardDescription className="text-sm text-muted-foreground">
