@@ -132,5 +132,5 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   { name: 'LinkedIn', url: 'https://linkedin.com/in/yourprofile', icon: Linkedin },
   { name: 'GitHub', url: 'https://github.com/yourprofile', icon: Github },
-  { name: 'Email', url: 'mailto:tb.muhansiram@example.com', icon: Mail },
+  { name: 'Email', url: 'mailto:tb.[lastname]@example.com', icon: Mail },
 ];

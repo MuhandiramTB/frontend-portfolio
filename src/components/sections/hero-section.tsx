@@ -44,7 +44,7 @@ export function HeroSection() {
       `}</style>
       <div className="relative z-10 space-y-6">
         <h1 className="animate-fade-in-up text-5xl font-extrabold tracking-tight text-primary sm:text-6xl md:text-7xl" style={{ animationDelay: '0.2s' }}>
-          TB Muhansiram
+          TB [LastName]
         </h1>
         <p className="animate-fade-in-up text-xl font-medium text-foreground/90 sm:text-2xl md:text-3xl" style={{ animationDelay: '0.4s' }}>
           Frontend Web Developer

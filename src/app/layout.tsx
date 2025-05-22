@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'TB Muhansiram | Frontend Developer',
-  description: 'Personal portfolio of TB Muhansiram, a Frontend Web Developer building scalable web apps with MERN & Firebase.',
+  title: 'TB [LastName] | Frontend Developer',
+  description: 'Personal portfolio of TB [LastName], a Frontend Web Developer building scalable web apps with MERN & Firebase.',
 };
 
 export default function RootLayout({

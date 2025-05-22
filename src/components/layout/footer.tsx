@@ -15,7 +15,7 @@ export function Footer() {
     <footer className="bg-muted py-8 text-muted-foreground">
       <div className="container mx-auto flex flex-col items-center justify-between px-4 md:flex-row md:px-6">
         <p className="text-sm">
-          &copy; {currentYear} TB Muhansiram. All rights reserved.
+          &copy; {currentYear} TB [LastName]. All rights reserved.
         </p>
         <div className="mt-4 flex space-x-4 md:mt-0">
           {socialLinks.map((link) => (
