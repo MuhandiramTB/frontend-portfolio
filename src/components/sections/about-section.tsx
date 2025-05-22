@@ -28,7 +28,7 @@ export function AboutSection() {
           <div className="md:flex">
             <div className="md:w-1/3">
               <Image
-                src="https://placehold.co/400x400.png"
+                src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_640.jpg"
                 alt="TB Muhandiram"
                 width={400}
                 height={400}

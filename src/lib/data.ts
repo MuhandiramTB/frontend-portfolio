@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Mail, Cloud, Figma, GitMerge, Briefcase, School, Code, TerminalSquare, Puzzle, Pipette, Rocket, Palette, Database, Brain, Package } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
@@ -31,7 +32,7 @@ export const projectsData: Project[] = [
     id: 1,
     name: 'E-commerce Platform',
     description: 'A full-featured e-commerce site with product listings, cart, and checkout, built for scalability and a smooth user experience.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_640.jpg',
     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Express.js'],
     githubLink: 'https://github.com',
     liveLink: '#',
@@ -41,7 +42,7 @@ export const projectsData: Project[] = [
     id: 2,
     name: 'Task Management App',
     description: 'A collaborative task management tool designed for teams to organize, track, and manage projects efficiently.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_640.jpg',
     technologies: ['React', 'Firebase', 'Material UI', 'Redux'],
     githubLink: 'https://github.com',
     liveLink: '#',
@@ -51,7 +52,7 @@ export const projectsData: Project[] = [
     id: 3,
     name: 'Portfolio Website Template',
     description: 'A sleek, customizable portfolio template for developers and creatives to showcase their work with elegance.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://cdn.pixabay.com/photo/2020/03/19/21/54/illustration-4948885_640.png',
     technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
     githubLink: 'https://github.com',
     liveLink: '#',
@@ -61,11 +62,11 @@ export const projectsData: Project[] = [
     id: 4,
     name: 'Recipe Finder App',
     description: 'An intuitive application to search, discover, and save your favorite recipes from a vast culinary database.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://cdn.pixabay.com/photo/2017/06/02/18/24/fruit-2367029_640.jpg',
     technologies: ['Vue.js', 'Spoonacular API', 'Bootstrap', 'Vuex'],
     githubLink: 'https://github.com',
     liveLink: '#',
-    imageAiHint: 'recipe app interface'
+    imageAiHint: 'recipe app interface food'
   },
 ];
 
@@ -137,3 +138,4 @@ export const socialLinks: SocialLink[] = [
   { name: 'GitHub', url: 'https://github.com/tbmuhandiram', icon: Github },
   { name: 'Email', url: 'mailto:tb.muhandiram@example.com', icon: Mail },
 ];
+
