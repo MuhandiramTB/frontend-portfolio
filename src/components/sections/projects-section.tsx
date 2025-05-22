@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -17,7 +18,7 @@ export function ProjectsSection() {
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {projectsData.map((project) => (
-            <Card key={project.id} className="flex transform flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <Card key={project.id} className="flex transform flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]">
               <div className="relative h-60 w-full">
                 <Image
                   src={project.image}

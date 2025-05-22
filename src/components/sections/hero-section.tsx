@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -12,8 +13,8 @@ export function HeroSection() {
   if (!mounted) return null; // Avoid hydration mismatch by not rendering animations server-side
 
   return (
-    <section id="home" className="relative flex h-screen min-h-[600px] w-full flex-col items-center justify-center bg-gradient-to-br from-background to-secondary/50 px-4 text-center">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-[0.02]"></div>
+    <section id="home" className="relative flex h-screen min-h-[600px] w-full flex-col items-center justify-center bg-gradient-to-br from-background to-secondary/50 px-4 text-center overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-[0.02] animate-pan-grid"></div>
       <style jsx global>{`
         .bg-grid-pattern {
           background-image: linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
@@ -32,6 +33,13 @@ export function HeroSection() {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        .animate-pan-grid {
+          animation: panGrid 30s linear infinite;
+        }
+        @keyframes panGrid {
+          0% { background-position: 0% 0%; }
+          100% { background-position: 2rem 2rem; } /* Pan one grid cell size */
         }
       `}</style>
       <div className="relative z-10 space-y-6">
